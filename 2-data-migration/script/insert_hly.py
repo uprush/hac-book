@@ -58,9 +58,9 @@ for line in f:
     value23 = line[172:178].strip()
     value24 = line[179:185].strip()
 
-#    print sql % (table, stationid, month, day, value1, value2, value3, value4, value5, value6, value7, value8, value9, value10, value11, value12, value13, value14, value15, value16, value17, value18, value19, value20, value21, value22, value23, value24)
+#    print sql % ( stationid, month, day, value1, value2, value3, value4, value5, value6, value7, value8, value9, value10, value11, value12, value13, value14, value15, value16, value17, value18, value19, value20, value21, value22, value23, value24)
     cursor.execute (sql, (stationid, month, day, value1, value2, value3, value4, value5, value6, value7, value8, value9, value10, value11, value12, value13, value14, value15, value16, value17, value18, value19, value20, value21, value22, value23, value24))
-
+    conn.commit()
 
 f.close()
 cursor.close ()
